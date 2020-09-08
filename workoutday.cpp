@@ -1,8 +1,69 @@
 #include <iostream>
 #include <string>
 
+class Member
+{
+public:
+    Member(int x, float y, std::string z) : age(x), weight(y), name(z){};
+
+    float Set_Get_Weight(float weight);
+
+    int age;
+    float weight;
+    std::string name;
+};
+
+float Member::Set_Get_Weight(float weight)
+{
+    Member user(28, user.weight = weight, "Steven");
+    int res = 0;
+    std::cout << "Did your weight change? [1] Yes [2] No\n";
+    std::cin >> res;
+    std::cout << "\n";
+
+    if (res == 1)
+    {
+
+        std::cout << "Enter new weight\n";
+        std::cin >> user.weight;
+        std::cout << "\n\n";
+
+        std::cout << "                      Hello " << user.name << ",     Age: " << user.age << "       Weight: " << user.weight << "\n\n";
+        std::cout << "     ========================================================================================\n\n";
+    }
+    else if (res == 2)
+    {
+
+        std::cout << "Weight did not change\n";
+    }
+    else
+    {
+        std::cout << "Could not verify weight change\n";
+    }
+
+    return user.weight;
+}
+
+void Kaizen_Header()
+{
+    std::cout << "                        ====================================\n";
+    std::cout << "                        ============Kaizen Physique=========\n";
+    std::cout << "                        ====================================\n";
+    std::cout << "\n";
+    std::cout << "                           Keep track of your weightloss\n";
+    std::cout << "                                        goals.             \n";
+    std::cout << "                        ....................................\n\n\n";
+}
+
 int main()
 {
+
+    Kaizen_Header();
+    Member user(28, 213.60, "Steven");
+    std::cout << "                      Hello " << user.name << ",     Age: " << user.age << "       Weight: " << user.weight << "\n\n";
+    std::cout << "     ========================================================================================\n\n";
+    float weight_change = user.Set_Get_Weight(user.weight);
+    std::cout << "\n";
 
     int res = 1;
 
