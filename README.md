@@ -1,2 +1,2 @@
 # workoutreminder
-Entering day of week, lets the OS know what part of the body you should workout on that particular day
+User will be able to see which workout they should be performing that day as well as, advice on rest days and if user has not worked out.
